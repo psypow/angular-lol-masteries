@@ -1,0 +1,33 @@
+{
+  "name": "angular-lol-masteries",
+  "version": "1.0.0",
+  "description": "League of legends masteries AngularJS directives and services",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "grunt karma --gruntfile=./grunt/gruntfile.js --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psypow/angular-lol-masteries.git"
+  },
+  "keywords": [
+    "lol",
+    "league",
+    "of",
+    "legends",
+    "angularjs",
+    "directive",
+    "masteries"
+  ],
+  "author": "Pablo Estornut",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "raw-loader": "^0.5.1"
+  },
+  "dependencies": {
+    "angular": "^1.5.0-beta.0",
+    "angular-mocks": "^1.5.0-beta.0",
+    "leagueapi": "^0.4.10"
+  }
+}

@@ -1,0 +1,7 @@
+https://developer.riotgames.com/docs/static-data
+https://developer.riotgames.com/api/methods
+https://github.com/claudiowilson/LeagueJS
+
+http://ddragon.leagueoflegends.com/cdn/5.17.1/img/sprite/gray_mastery0.png
+http://ddragon.leagueoflegends.com/cdn/img/mastery/masteryback.jpg
+http://ddragon.leagueoflegends.com/tool/
