@@ -22,9 +22,11 @@
   "author": "Pablo Estornut",
   "license": "MIT",
   "devDependencies": {
+    "angular-lol-masteries-grunt": "file:grunt",
     "babel": "^5.8.23",
     "css-loader": "^0.18.0",
     "file-loader": "^0.8.4",
+    "grunt-cli": "^0.1.13",
     "node-sass": "^3.3.3",
     "raw-loader": "^0.5.1",
     "sass-loader": "^2.0.1",
