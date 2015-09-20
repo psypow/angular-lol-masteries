@@ -1,11 +1,11 @@
 module.exports = function(config) {
+    console.log("-- LOADED KARMA CONF --");
     config.set({
         basePath: '../src/',
         singleRun:false,
         files:[
             '../node_modules/angular/angular.min.js',
             '../node_modules/angular-mocks/angular-mocks.js',
-            './main.js',
             './**/*.js',
             './**/*.spec.js'
         ],
