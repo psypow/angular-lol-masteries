@@ -3,4 +3,4 @@ node_js:
 - '0.12.2'
 before_script:
   - npm install -g grunt grunt-cli
-script: npm install && cd grunt && npm install && npm test
+script: cd grunt && npm install && npm test

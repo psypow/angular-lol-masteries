@@ -9,7 +9,7 @@ module.exports = function (grunt) {
                 port: 9999,
                 singleRun: true,
                 browsers: ['Firefox'],
-                logLevel: 'INFO'
+                logLevel: 'ERROR'
             }
         }
     });

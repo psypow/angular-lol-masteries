@@ -1,5 +1,4 @@
 module.exports = function(config) {
-    console.log("-- LOADED KARMA CONF --");
     config.set({
         basePath: '../src/',
         singleRun:false,
@@ -13,7 +12,7 @@ module.exports = function(config) {
             '*-module.js'
         ],
         frameworks:['jasmine'],
-        plugins:['karma-jasmine', 'karma-chrome-launcher'],
+        plugins:['karma-jasmine', 'karma-chrome-launcher', 'karma-firefox-launcher'],
         reporters: ['progress']
     });
 };
