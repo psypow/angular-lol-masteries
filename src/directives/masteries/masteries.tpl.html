@@ -1,1 +1,5 @@
-<div class="masteries">masteries</div>
+<div class="masteries">
+    <div class="mastery"
+         ng-class="getPositionClasses(masterySlots[$index])"
+         ng-repeat="mastery in masterySlots track by $index">{{masterySlots[$index].masteryId}}</div>
+</div>
