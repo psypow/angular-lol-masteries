@@ -5,84 +5,29 @@
   position: relative;
 }
 
+.masteries-masteryTree {
+  float: left;
+  position: relative;
+  border:1px solid red;
+  width: 275px;
+  box-sizing: border-box;
+}
+
+.masteries-masteryTree-row {
+  margin: 10px 7px 10px 7px;
+  border:1px solid green;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
 .mastery {
-  position: absolute;
-  border: 1px solid red;
-  width: 48px;
-  height: 48px;
-  top: 16px;
-
-  &--block1 {
-    &--column1 {
-      left: 22px;
-    }
-
-    &--column2 {
-      left: 84px;
-    }
-
-    &--column3 {
-      left: 146px;
-    }
-
-    &--column4 {
-      left: 208px;
-    }
-  }
-
-  &--block2 {
-    &--column1 {
-      left: 296px;
-    }
-
-    &--column2 {
-      left: 356px;
-    }
-
-    &--column3 {
-      left: 420px;
-    }
-
-    &--column4 {
-      left: 482px;
-    }
-  }
-
-  &--block3 {
-    &--column1 {
-      left:570px;
-    }
-
-    &--column2 {
-      left:632px;
-    }
-
-    &--column3 {
-      left:694px;
-    }
-
-    &--column4 {
-      left:756px;
-    }
-  }
-
-  &--row2 {
-    top: 88px;
-  }
-
-  &--row3 {
-    top: 159px;
-  }
-
-  &--row4 {
-    top: 232px;
-  }
-
-  &--row5 {
-    top: 303px;
-  }
-
-  &--row6 {
-    top: 377px;
-  }
+  border:1px solid blue;
+  box-sizing: border-box;
+  height: 54px;
+  width: 54px;
+  float: left;
+  margin-left: 13px;
+}
+.mastery:first-child {
+  margin-left: 0;
 }

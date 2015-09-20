@@ -28,27 +28,8 @@ module.exports = function(ngModule){
             return defer.promise;
         }
 
-        /**
-         *
-         * @param masteries {Array}
-         * @returns {Array}
-         */
-        function convertStaticMasteriesToPlainArray(masteries){
-            var plainMasteriesArray = [];
-            forEach(masteries.tree, function(masteriesBlock){
-                forEach(masteriesBlock, function(masteriesRow){
-                    forEach(masteriesRow, function(mastery){
-                        plainMasteriesArray.push(mastery);
-                    });
-                });
-            });
-
-            return plainMasteriesArray;
-        }
-
         return {
-            getMasteriesStaticData: getMasteriesStaticData,
-            convertStaticMasteriesToPlainArray: convertStaticMasteriesToPlainArray
+            getMasteriesStaticData: getMasteriesStaticData
         }
     }]);
 };

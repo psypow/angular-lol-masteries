@@ -1,5 +1,9 @@
 <div class="masteries">
-    <div class="mastery" ng-show="masterySlots[$index]"
-         ng-class="getPositionClasses(masterySlots[$index])"
-         ng-repeat="mastery in masterySlots track by $index">{{masterySlots[$index].masteryId}}</div>
+    <div class="masteries-masteryTree" ng-repeat="masteryTree in masterySlots.tree track by $index">
+        <div class="masteries-masteryTree-row" ng-repeat="masteryRow in masteryTree track by $index">
+            <div class="mastery" ng-repeat="masterySlot in masteryRow track by $index">
+                <div class="mastery-slot" ng-class="getMasterySlotClass(masterySlot)">{{masterySlot.masteryId}}</div>
+            </div>
+        </div>
+    </div>
 </div>
