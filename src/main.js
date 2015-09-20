@@ -1,1 +1,0 @@
-module.exports = require('./angular-lol-masteries-module.js');

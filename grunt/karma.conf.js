@@ -10,7 +10,7 @@ module.exports = function(config) {
             './**/*.spec.js'
         ],
         exclude:[
-
+            '*-module.js'
         ],
         frameworks:['jasmine'],
         plugins:['karma-jasmine', 'karma-chrome-launcher']

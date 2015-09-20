@@ -2,7 +2,7 @@
   "name": "angular-lol-masteries",
   "version": "1.0.0",
   "description": "League of legends masteries AngularJS directives and services",
-  "main": "src/main.js",
+  "main": "src/angular-lol-masteries-module.js",
   "scripts": {
     "test": "grunt karma --gruntfile=./grunt/gruntfile.js --verbose"
   },

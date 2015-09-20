@@ -1,7 +1,9 @@
-require('./directives/masteries/masteries.scss');
+module.exports = (function(){
+    var lolMasteries = require('./angular-lol-masteries.js');
 
-var ngModule = angular.module('angular-lol-masteries', []);
-module.exports = ngModule;
+    require('./services/masteriesData');
+    require('./directives/masteries/masteries');
+    require('./directives/masteries/masteries.scss');
 
-require('./services/masteriesData')(ngModule);
-require('./directives/masteries/masteries')(ngModule);
+    return lolMasteries;
+})();
