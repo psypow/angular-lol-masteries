@@ -13,6 +13,7 @@ module.exports = function(config) {
             '*-module.js'
         ],
         frameworks:['jasmine'],
-        plugins:['karma-jasmine', 'karma-chrome-launcher']
+        plugins:['karma-jasmine', 'karma-chrome-launcher'],
+        reporters: ['progress']
     });
 };
