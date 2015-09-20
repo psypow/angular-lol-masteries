@@ -1,4 +1,5 @@
 module.exports = function(ngModule){
+    //TODO missing unit tests
     ngModule.directive('masteries', ['masteriesData', function(masteriesData){
         return {
             replace: true,
@@ -17,9 +18,8 @@ module.exports = function(ngModule){
                     var masteryId = mastery && mastery.masteryId;
 
                     return masteryId?{
-                      [masteryClass + masteryBlock + masteryId[1]]:true,
-                      [masteryClass + masteryRow + masteryId[2]]:true,
-                      [masteryClass + masteryColumn + masteryId[3]]:true
+                      [masteryClass + masteryBlock +  masteryId[1] + masteryColumn + masteryId[3]]:true,
+                      [masteryClass + masteryRow + masteryId[2]]:true
                     }:'';
                 }
             }
