@@ -22,16 +22,25 @@
 
 .mastery {
   border:1px solid blue;
-  box-sizing: border-box;
   height: 48px;
   width: 48px;
   float: left;
   margin-left: 13px;
+  position: relative;
 }
 .mastery-slot {
   background-image: url('http://ddragon.leagueoflegends.com/cdn/5.17.1/img/sprite/gray_mastery0.png');
   height: 48px;
   width: 48px;
+  box-sizing: border-box;
+  position: absolute;
+  &--summoner {
+    top: 0;
+    border:1px solid yellow;
+    box-sizing: border-box;
+    background-image: url('http://ddragon.leagueoflegends.com/cdn/5.17.1/img/sprite/mastery0.png');
+    cursor: pointer;
+  }
 }
 .mastery:first-child {
   margin-left: 0;

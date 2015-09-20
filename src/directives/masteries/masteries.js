@@ -2,6 +2,9 @@ angular.module('angular-lol-masteries').directive('masteries', ['masteriesData',
     return {
         replace: true,
         template: require('./masteries.tpl.html'),
+        scope:{
+            summonerMasteries:'='
+        },
         controller: ($scope) => {
             masteriesData.getMasteriesStaticData().then((masteries) => {
                 $scope.masterySlots = masteries;
