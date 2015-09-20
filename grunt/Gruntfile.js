@@ -1,5 +1,4 @@
 module.exports = function (grunt) {
-    console.log("-- GRUNTFILE LOADED --");
     grunt.loadNpmTasks('grunt-karma');
 
     grunt.initConfig({
@@ -8,7 +7,7 @@ module.exports = function (grunt) {
                 configFile: 'karma.conf.js',
                 port: 9999,
                 singleRun: true,
-                browsers: ['Firefox', 'Chrome'],
+                browsers: ['Firefox'],
                 logLevel: 'ERROR'
             }
         }
