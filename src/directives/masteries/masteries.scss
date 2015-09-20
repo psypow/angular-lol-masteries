@@ -23,10 +23,15 @@
 .mastery {
   border:1px solid blue;
   box-sizing: border-box;
-  height: 54px;
-  width: 54px;
+  height: 48px;
+  width: 48px;
   float: left;
   margin-left: 13px;
+}
+.mastery-slot {
+  background-image: url('http://ddragon.leagueoflegends.com/cdn/5.17.1/img/sprite/gray_mastery0.png');
+  height: 48px;
+  width: 48px;
 }
 .mastery:first-child {
   margin-left: 0;
