@@ -3,7 +3,8 @@ angular.module('angular-lol-masteries').directive('masteryInfo', [function () {
         restrict: 'E',
         template: require('./mastery-info.tpl.html'),
         scope: {
-            masteryInfoData: '=masteryInfoSource'
+            masteryInfoData: '=masteryInfoSource',
+            masteryRank: '='
         },
         replace: true
     };
@@ -13,8 +14,13 @@ angular.module('angular-lol-masteries').directive('masteryInfoDescription', [fun
     return {
         restrict: 'A',
         replace:true,
-        link: function ($scope, iElement) {
+        scope:{
+            masteryInfoDescription:'='
+        },
+        link: function ($scope, iElement, iAttrs) {
             var unWatchDescription = $scope.$watch('masteryInfoDescription', function (description) {
+                console.log("iAttrs.masteryRank",iAttrs.masteryRank);
+                console.log("description", description);
                 iElement.html(description);
                 unWatchDescription();
             });

@@ -2,10 +2,19 @@
     <div class="masteries-masteryTree" ng-repeat="masteryTree in masterySlots.tree track by $index">
         <div class="masteries-masteryTree-row" ng-repeat="masteryRow in masteryTree track by $index">
             <div class="mastery" ng-repeat="masterySlot in masteryRow track by $index">
-                <div class="mastery-slot" ng-style="masteriesController.getStyle(masterySlots.data[masterySlot.masteryId])">{{masterySlot.masteryId}}</div>
+                <div class="mastery-slot"
+                     ng-style="::masteriesController.getStyle(masterySlots.data[masterySlot.masteryId])"></div>
                 <div class="mastery-slot mastery-slot--summoner"
-                     ng-style="masteriesController.getStyle(masterySlots.data[masterySlot.masteryId])"
-                     ng-show="summonerMasteries[masterySlot.masteryId]">{{summonerMasteries[masterySlot.masteryId].rank}}</div>
+                     ng-style="::masteriesController.getStyle(masterySlots.data[masterySlot.masteryId])"
+                     ng-if="::summonerMasteries[masterySlot.masteryId]">
+                    {{summonerMasteries[masterySlot.masteryId].rank}}
+                </div>
+                <mastery-info
+                        ng-if="::summonerMasteries[masterySlot.masteryId]"
+                        mastery-rank="summonerMasteries[masterySlot.masteryId].rank"
+                        class="mastery-info"
+                        mastery-info-source="masterySlots.data[masterySlot.masteryId]">
+                </mastery-info>
             </div>
         </div>
     </div>

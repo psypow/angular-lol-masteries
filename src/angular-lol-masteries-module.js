@@ -7,7 +7,7 @@ module.exports = (function(){
     require('./directives/masteries/MasteriesController/MasteriesController');
     require('./directives/masteries/masteries.scss');
 
-    require('./directives/mastery-info/mastery-info');
+    require('./directives/masteries/mastery-info/mastery-info');
 
     return lolMasteries;
 })();

@@ -21,27 +21,53 @@
 }
 
 .mastery {
+  font-family: Arial, serif;
   border:1px solid blue;
   height: 48px;
   width: 48px;
   float: left;
   margin-left: 13px;
   position: relative;
-}
-.mastery-slot {
-  background-image: url('http://ddragon.leagueoflegends.com/cdn/5.17.1/img/sprite/gray_mastery0.png');
-  height: 48px;
-  width: 48px;
-  box-sizing: border-box;
-  position: absolute;
-  &--summoner {
-    top: 0;
-    border:1px solid yellow;
-    box-sizing: border-box;
-    background-image: url('http://ddragon.leagueoflegends.com/cdn/5.17.1/img/sprite/mastery0.png');
-    cursor: pointer;
+
+  &:first-child {
+    margin-left: 0;
   }
-}
-.mastery:first-child {
-  margin-left: 0;
+
+  &-slot {
+    background-image: url('http://ddragon.leagueoflegends.com/cdn/5.17.1/img/sprite/gray_mastery0.png');
+    height: 48px;
+    width: 48px;
+    box-sizing: border-box;
+    position: absolute;
+    padding: 3px;
+    font-size:20px;
+
+    &--summoner {
+      top: 0;
+      border:1px solid yellow;
+      box-sizing: border-box;
+      background-image: url('http://ddragon.leagueoflegends.com/cdn/5.17.1/img/sprite/mastery0.png');
+      cursor: pointer;
+      color:white;
+    }
+
+    &:hover + .mastery-info {
+      display:block;
+    }
+  }
+
+  &-info {
+    position: absolute;
+    width: 200px;
+    background-color: #161616;
+    color:white;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 3;
+    display:none;
+    &-title{
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+  }
 }
