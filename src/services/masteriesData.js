@@ -1,4 +1,7 @@
-angular.module('angular-lol-masteries').factory('masteriesData', ['$http', '$q', ($http, $q) => {
+angular.module('angular-lol-masteries').factory('masteriesData', ['$http', '$q', function ($http, $q) {
+    var masteriesDataUrlTemplate = 'http://ddragon.leagueoflegends.com/cdn/$version$/data/$language$/mastery.json';
+    var forEach = angular.forEach;
+
     /**
      *
      * @param options [Object] language and version
@@ -11,18 +14,20 @@ angular.module('angular-lol-masteries').factory('masteriesData', ['$http', '$q',
         //TODO if version is not defined we should ask to another service for the last version
             masteriesDataUrl;
 
-        masteriesDataUrl = `http://ddragon.leagueoflegends.com/cdn/${version}/data/${language}/mastery.json`;
+        masteriesDataUrl = masteriesDataUrlTemplate.replace('$version$', version).replace('$language$', language);
 
-        $http.get(masteriesDataUrl, {cache: true}).success(data => {
+        $http.get(masteriesDataUrl, {cache: true}).success(function (data) {
             defer.resolve(data);
-        }).error((data, status, headers, config) => {
+        }).error(errorCallback);
+
+        function errorCallback(data, status, headers, config) {
             defer.reject({status: status, data: data, headers: headers, config: config});
-        });
+        }
 
         return defer.promise;
     }
 
     return {
         getMasteriesStaticData: getMasteriesStaticData
-    };
+    }
 }]);
