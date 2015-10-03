@@ -7,3 +7,9 @@ before_install:
 before_script:
   - npm install -g grunt grunt-cli
 script: cd grunt && npm install && npm test
+notifications:
+  slack:
+    on_success: change
+    on_fail: change
+  email:
+    - psypow.dev@gmail.com
