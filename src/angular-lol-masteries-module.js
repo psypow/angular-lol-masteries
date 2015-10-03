@@ -3,6 +3,7 @@ module.exports = (function(){
 
     require('./services/masteriesData');
     require('./directives/masteries/masteries');
+    require('./directives/masteries/MasteriesController/MasteriesController');
     require('./directives/masteries/masteries.scss');
 
     return lolMasteries;
