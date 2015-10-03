@@ -19,8 +19,6 @@ angular.module('angular-lol-masteries').directive('masteryInfoDescription', [fun
         },
         link: function ($scope, iElement, iAttrs) {
             var unWatchDescription = $scope.$watch('masteryInfoDescription', function (description) {
-                console.log("iAttrs.masteryRank",iAttrs.masteryRank);
-                console.log("description", description);
                 iElement.html(description);
                 unWatchDescription();
             });
