@@ -2,11 +2,11 @@ language: node_js
 node_js:
 - '0.10'
 notifications:
-  slack:
-    on_success: always
-    on_fail: always
   email:
-    - psypow.dev@gmail.com
+    recipients:
+      - psypow.dev@gmail.com
+  on_success: always
+  on_fail: always
 before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
