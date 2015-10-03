@@ -4,7 +4,7 @@ angular.module('angular-lol-masteries').controller('MasteriesController', functi
         $scope.masterySlots = masteries;
     });
 
-    this.getStyle = (masteryData) => {
+    this.getStyle = masteryData => {
         sanityCheckMasteryData(masteryData);
         return masteryData && isValidMasteryDataObject(masteryData) ?{
             'background-position': '-'+masteryData.image.x+'px '+'-'+masteryData.image.y+'px '
