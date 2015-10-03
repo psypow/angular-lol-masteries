@@ -9,7 +9,7 @@ before_script:
 script: cd grunt && npm install && npm test
 notifications:
   slack:
-    on_success: change
-    on_fail: change
+    on_success: always
+    on_fail: always
   email:
     - psypow.dev@gmail.com
