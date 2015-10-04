@@ -3,23 +3,25 @@ angular.module('angular-lol-masteries').directive('staticMasteries', ['masteries
     return {
         replace: true,
         scope:{
-            summonerMasteries:'='
+            summonerMasteries:'=',
+            options:'=staticMasteriesOptions'
         },
         template:'<div class="masteries"></div>',
         link:function($scope, iElement){
             $scope.$watch('summonerMasteries', function(summonerMasteries){
                 if(summonerMasteries){
                     masteriesData.getMasteriesStaticData().then((masterySlots) => {
-                        buildTreesHMTL(iElement, masterySlots, $scope.summonerMasteries);
+                        buildTreesHMTL(iElement, masterySlots, $scope.summonerMasteries, $scope.options);
                     });
                 }
             });
         }
     };
 
-    function buildTreesHMTL(targetElement, masterySlots, summonerMasteries) {
+    function buildTreesHMTL(targetElement, masterySlots, summonerMasteries, options) {
+        console.log("options",options);
         var rootDiv = angular.element('<div/>');
-
+        options = options ||{};
         forEach(masterySlots.tree, function(tree){
             var treeDiv = element('<div class="masteries-masteryTree"/>');
 
@@ -37,7 +39,10 @@ angular.module('angular-lol-masteries').directive('staticMasteries', ['masteries
                         var slotSpriteStyle = masterySprite.getSpriteStyle(masteryData);
 
                         slotDiv.css(slotSpriteStyle);
-                        wrapperDiv.append(slotDiv);
+
+                        if(!options.hideSlots) {
+                            wrapperDiv.append(slotDiv);
+                        }
 
                         var summonerMastery = summonerMasteries[masteryId];
                         if(summonerMastery){
