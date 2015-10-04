@@ -1,8 +1,6 @@
 .masteries {
-  height: 479px;
-  width: 827px;
-  background-color: #98c2ff;
-  position: relative;
+  display: inline-block;
+  background-color: rgba(152, 194, 255, 0.49);
 }
 
 .masteries-masteryTree {
@@ -17,6 +15,8 @@
     border:1px solid green;
     box-sizing: border-box;
     display: inline-block;
+    min-height: 48px;
+    min-width: 241px;
   }
 }
 

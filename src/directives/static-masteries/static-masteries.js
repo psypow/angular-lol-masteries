@@ -5,6 +5,7 @@ angular.module('angular-lol-masteries').directive('staticMasteries', ['masteries
         scope:{
             summonerMasteries:'='
         },
+        template:'<div class="masteries"></div>',
         link:function($scope, iElement){
             $scope.$watch('summonerMasteries', function(summonerMasteries){
                 if(summonerMasteries){
